@@ -17,7 +17,7 @@ $output = $minifier->html($string); // <a href="/foo" class="bar moo ">Hello Wor
 You can install the package via composer:
 
 ``` bash
-composer require nckg/laravel-html-minifier
+composer require nckg/laravel-minify-html
 ```
 If you are using Laravel you can add the middleware to your middleware providers
 
