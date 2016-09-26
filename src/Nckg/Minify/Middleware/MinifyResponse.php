@@ -20,7 +20,7 @@ class MinifyResponse
         /** @var Response $response */
         $response = $next($request);
 
-        if (app()->isLocal()) {
+        if (! app()->isLocal()) {
             $response->setContent((new Minifier)->html($response->getContent()));
         }
 
