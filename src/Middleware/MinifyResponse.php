@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Nckg\Minify\Middleware;
 
 use Closure;
@@ -11,8 +10,9 @@ class MinifyResponse
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure                 $next
+     *
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -20,8 +20,8 @@ class MinifyResponse
         /** @var Response $response */
         $response = $next($request);
 
-        if (! app()->isLocal()) {
-            $response->setContent((new Minifier)->html($response->getContent()));
+        if (!app()->isLocal()) {
+            $response->setContent((new Minifier())->html($response->getContent()));
         }
 
         return $response;

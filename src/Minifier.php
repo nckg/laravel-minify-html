@@ -17,6 +17,7 @@ class Minifier
 
     /**
      * @param string $html
+     *
      * @return string
      */
     public function html(string $html): string
