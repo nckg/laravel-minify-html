@@ -1,0 +1,33 @@
+{
+    "name": "nckg/laravel-minify-html",
+    "description": "Minify your responses in Laravel 5.x",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Goris",
+            "email": "nickgoris@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : "^7.0"
+    },
+    "require-dev": {
+        "illuminate/support": "~5.1.0|~5.2.0|~5.3.0",
+        "phpunit/phpunit": "5.*",
+        "orchestra/testbench": "^3.2",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nckg\\Minify\\": "src/Nckg/Minify/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nckg\\Minify\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
