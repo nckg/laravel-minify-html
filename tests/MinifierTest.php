@@ -3,7 +3,6 @@
 
 namespace Nckg\Minify\Test;
 
-
 use Nckg\Minify\Minifier;
 
 class MinifierTest extends TestCase
