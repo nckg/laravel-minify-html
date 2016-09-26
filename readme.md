@@ -1,4 +1,5 @@
 # HTML minifier
+[![Build Status](https://travis-ci.org/nckg/laravel-minify-html.svg?branch=master)](https://travis-ci.org/nckg/laravel-minify-html)
 
 ## Introduction
 
