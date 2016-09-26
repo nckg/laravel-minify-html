@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Nckg\\Minify\\": "src/Nckg/Minify/"
+            "Nckg\\Minify\\": "src"
         }
     },
     "autoload-dev": {
