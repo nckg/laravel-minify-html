@@ -1,5 +1,6 @@
 # HTML minifier
-[![Build Status](https://travis-ci.org/nckg/laravel-minify-html.svg?branch=master)](https://travis-ci.org/nckg/laravel-minify-html) [![Packagist](https://img.shields.io/packagist/v/nckg/laravel-minify-html.svg?maxAge=2592000?style=flat-square)](https://github.com/nckg/laravel-minify-html) [![Packagist](https://img.shields.io/packagist/dt/nckg/laravel-minify-html.svg?maxAge=2592000?style=flat-square)](https://github.com/nckg/laravel-minify-html)
+[![Build Status](https://travis-ci.org/nckg/laravel-minify-html.svg?branch=master)](https://travis-ci.org/nckg/laravel-minify-html) [![Packagist](https://img.shields.io/packagist/v/nckg/laravel-minify-html.svg?maxAge=2592000?style=flat-square)](https://github.com/nckg/laravel-minify-html) [![Packagist](https://img.shields.io/packagist/dt/nckg/laravel-minify-html.svg?maxAge=2592000?style=flat-square)](https://github.com/nckg/laravel-minify-html) [![codecov](https://codecov.io/gh/nckg/laravel-minify-html/branch/master/graph/badge.svg)](https://codecov.io/gh/nckg/laravel-minify-html)
+
 ## Introduction
 
 Very, very simple html minifier with Laravel 5.x support.
