@@ -11,6 +11,8 @@ class Minifier
         '/(?<!\S)\/\/\s*[^\r\n]*/' => '',
         // Shorten multiple white spaces
         '/\s{2,}/' => ' ',
+        // Remove whitespaces between HTML tags
+        '/>\s+</' => '><',
         // Collapse new lines
         '/(\r?\n)/' => '',
     ];
