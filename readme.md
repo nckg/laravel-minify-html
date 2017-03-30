@@ -5,6 +5,20 @@
 
 Very, very simple html minifier with Laravel 5.x support.
 
+It _minifies_ HTML by
+
+1. removing HTML comments except IE conditions
+2. removing comments
+3. shorten multiple white spaces
+4. removing whitespaces between HTML tags
+5. collapsing new lines
+ 
+You should end up with a small size profit:
+
+| Uniminfied | Minified |
+|------------|----------|
+| 64.2KB     | 44.6KB   |
+
 ## Code Samples
 
 ```php
