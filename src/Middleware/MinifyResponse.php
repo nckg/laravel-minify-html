@@ -21,10 +21,23 @@ class MinifyResponse
         /** @var Response $response */
         $response = $next($request);
 
-        if (!app()->isLocal() and false === is_a($response, StreamedResponse::class)) {
+        if (!app()->isLocal() && $this->isHtml($response)) {
             $response->setContent((new Minifier())->html($response->getContent()));
         }
 
         return $response;
+    }
+
+     /**
+     * Check if the content type header is html.
+     *
+     * @param \Illuminate\Http\Response $response
+     *
+     * @return bool
+     */
+    protected function isHtml($response)
+    {
+        $type = $response->headers->get('Content-Type');
+        return strtolower(strtok($type, ';')) === 'text/html';
     }
 }
