@@ -46,6 +46,14 @@ class MinifierTest extends TestCase
     }
 
     /** @test */
+    public function it_doesnt_remove_double_links()
+    {
+        $string = '<a href="">link1</a> <a href="">link2</a>';
+        $expected = '<a href="">link1</a> <a href="">link2</a>';
+        $this->assertMinifiedString($expected, $string);
+    }
+
+    /** @test */
     public function it_minifies_an_entire_page_correct()
     {
         $string = file_get_contents(__DIR__.'/_data/page.html');
