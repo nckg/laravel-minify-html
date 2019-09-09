@@ -21,7 +21,7 @@ class MinifyResponse
         /** @var Response $response */
         $response = $next($request);
 
-        if (!app()->isLocal() && $this->isHtml($response)) {
+        if (config('app.debug') === false && $this->isHtml($response)) {
             $response->setContent((new Minifier())->html($response->getContent()));
         }
 
