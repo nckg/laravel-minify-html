@@ -6,15 +6,15 @@ class Minifier
 {
     public $htmlFilters = [
         // Remove HTML comments except IE conditions
-        '/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s' => '',
+        '/(?s)<(pre|textarea)[^<]*>.*?<\\/(pre|textarea)>(*SKIP)(*F)|<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s' => '',
         // Remove comments in the form /* */
-        '/(?<!\S)\/\/\s*[^\r\n]*/' => '',
+        '/(?s)<(pre|textarea)[^<]*>.*?<\\/(pre|textarea)>(*SKIP)(*F)|(?<!\S)\/\/\s*[^\r\n]*/' => '',
         // Shorten multiple white spaces
-        '/\s{2,}/' => ' ',
+        '/(?s)<(pre|textarea)[^<]*>.*?<\\/(pre|textarea)>(*SKIP)(*F)|\s{2,}/' => ' ',
         // Remove whitespaces between HTML tags
-        '/>\s{2,}</' => '><',
+        '/(?s)<(pre|textarea)[^<]*>.*?<\\/(pre|textarea)>(*SKIP)(*F)|>\s{2,}</' => '><',
         // Collapse new lines
-        '/(\r?\n)/' => '',
+        '/(?s)<(pre|textarea)[^<]*>.*?<\\/(pre|textarea)>(*SKIP)(*F)|(\r?\n)/' => '',
     ];
 
     /**
